@@ -1,0 +1,105 @@
+.header {
+    display: grid;
+    padding-bottom: 4em;
+    font-weight: 550;
+}
+
+.header>img:nth-child(1) {
+    height: 12em;
+    width: 100%;
+    background-color: hsl(180, 29%, 50%);
+    grid-row: 1/8;
+    grid-column: 1;
+}
+
+.header>img:nth-child(2) {
+    display: none;
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-self: center;
+    width: 70em;
+    padding: 0 3em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px hsl(180, 8%, 52%);
+    background-color: #fff;
+    color: hsl(180, 29%, 50%);
+    grid-row: 7/9;
+    grid-column: 1;
+}
+
+.filter>div {
+    display: flex;
+    gap: 1em;
+    align-self: center;
+}
+
+.filter p {
+    justify-self: end;
+}
+
+.filter>p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.tag {
+    display: flex;
+}
+
+.tag>img {
+    background-color: hsl(180, 29%, 50%);
+    padding: .4em;
+    align-self: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.tag>img:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.tag>p {
+    background-color: hsl(180, 31%, 95%);
+    padding: .3em;
+}
+
+@media (max-width:450px) {
+
+    .header {
+        padding-bottom: 3.5em;
+    }
+
+    .header>img:nth-child(1) {
+        display: none;
+    }
+
+    .header>img:nth-child(2) {
+        display: block;
+        width: 100%;
+        background-color: hsl(180, 29%, 50%);
+        grid-row: 1/8;
+        grid-column: 1;
+    }
+
+    .filter {
+        grid-template-columns: 90% 10%;
+        width: fit-content;
+        padding: 0 1.5em;
+        grid-row: 7/9;
+    }
+
+    .filter>div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1em;
+        row-gap: 0;
+    }
+
+    .filter>p {
+        align-self: center;
+        color: hsl(180, 14%, 20%);
+    }
+}

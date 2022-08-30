@@ -1,0 +1,146 @@
+main {
+    display: grid;
+    padding-bottom: 3em;
+    row-gap: 2em;
+}
+
+.listing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    padding: 1em 2em;
+    width: 70em;
+    justify-self: center;
+    font-weight: 550;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+}
+
+hr {
+    display: none;
+}
+
+.job-info {
+    display: flex;
+    justify-self: start;
+    gap: 1em;
+}
+
+.job-info img {
+    width: 5em;
+    height: 5em;
+    align-self: center;
+}
+
+.job-info>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    gap: 1em;
+}
+
+.job-info div>div:nth-child(1)>p:nth-child(1) {
+    color: hsl(180, 29%, 50%);
+}
+
+.job-info div>div:nth-child(2):hover {
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+
+.job-info div>div:nth-child(3) {
+    font-weight: lighter;
+    font-size: 14px;
+    color: hsl(180, 8%, 52%);
+}
+
+.categories,
+.categories>div {
+    display: flex;
+    justify-self: end;
+    gap: 1.5em;
+    align-self: center;
+}
+
+.categories>p,
+.categories>div>p {
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    padding: .5em .6em;
+    border-radius: 6px;
+}
+
+.categories p:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.job-info div>div:nth-child(1)>p:nth-child(3) {
+    background-color: #000;
+}
+
+.job-info div>div:nth-child(1) p:nth-child(2) {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.job-info div>div:nth-child(1) p:nth-child(2),
+.job-info div>div:nth-child(1) p:nth-child(3) {
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    padding: .2em .5em;
+    font-size: 14px;
+    height: 1.7em;
+}
+
+.border {
+    border-left: 4px solid hsl(180, 29%, 50%);
+}
+
+@media (max-width: 450px) {
+
+    * {
+        overflow-x: hidden;
+    }
+
+    main {
+        padding: 0 1em 3em 1em;
+        row-gap: 3.5em;
+    }
+
+    .listing {
+        grid-template-columns: 1fr;
+        padding: 1em;
+        width: fit-content;
+    }
+
+    .job-info {
+        display: grid;
+    }
+
+    .job-info > div {
+        padding-top: 1em;
+    }
+
+    .job-info img {
+        position: absolute;
+        width: 3.5em;
+        height: 3.5em;
+        margin-top: -6.5em;
+    }
+
+    .categories>div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em;
+        row-gap: 0;
+        text-align: center;
+    }
+
+    hr {
+        display: block;
+        background: hsl(180, 8%, 52%);
+        width: 100%
+    }
+}
